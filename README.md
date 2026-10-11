@@ -1,14 +1,17 @@
-# ScreenCut
+# Mahmoud
+
+The app is called **Mahmoud** (this repository and the source folder are still named ScreenCut).
+
 
 A small, free, native macOS screen recorder and editor. No accounts, no watermark, no paid tier.
 Built only on Apple frameworks (ScreenCaptureKit, AVFoundation, Core Image, SwiftUI). Needs macOS 15+.
 
 ## Download
 
-Get `ScreenCut.zip` from the [latest release](https://github.com/MahmoudAbdelRahman/ScreenCut/releases/latest).
+Get `Mahmoud.zip` from the [latest release](https://github.com/MahmoudAbdelRahman/ScreenCut/releases/latest).
 Works on Apple silicon and Intel Macs with macOS 15 (Sequoia) or newer.
 
-1. Unzip and drag ScreenCut to Applications.
+1. Unzip and drag Mahmoud to Applications.
 2. First launch: right-click > Open > Open (the app is not notarized by Apple).
    If it is still blocked: System Settings > Privacy & Security > Open Anyway.
 
@@ -16,10 +19,10 @@ Works on Apple silicon and Intel Macs with macOS 15 (Sequoia) or newer.
 
 ```
 ./build.sh
-open build/ScreenCut.app
+open build/Mahmoud.app
 ```
 
-To keep it in your Applications folder: `cp -R build/ScreenCut.app ~/Applications/`
+To keep it in your Applications folder: `cp -R build/Mahmoud.app ~/Applications/`
 
 First recording: macOS asks for Screen Recording permission (System Settings > Privacy & Security >
 Screen & System Audio Recording). The app is signed ad hoc, so after a rebuild macOS may ask again.
@@ -27,7 +30,7 @@ Screen & System Audio Recording). The app is signed ad hoc, so after a rebuild m
 ## What it does (v0.1)
 
 - **Record** a display, window or app via the system picker, with system audio, microphone (optional) and cursor.
-  Files go to `~/Movies/ScreenCut/`. A menu bar item shows the time and stops recording.
+  Files go to `~/Movies/Mahmoud/`. A menu bar item shows the time and stops recording.
 - **Timeline**: split (⌘B), trim by dragging the yellow edges or with "Set In/Out to playhead",
   drag clips to reorder, duplicate, delete, undo/redo.
 - **Speed** per clip (0.25× to 16×, pitch kept), **volume** per clip.
@@ -50,7 +53,7 @@ Screen & System Audio Recording). The app is signed ad hoc, so after a rebuild m
 - Views: `ContentView`, `TimelineView`, `InspectorView`, `FrameEditorSheet`
 
 Developer check (renders a test edit without the UI):
-`build/ScreenCut.app/Contents/MacOS/ScreenCut --selftest in.mov out.mp4`
+`build/Mahmoud.app/Contents/MacOS/Mahmoud --selftest in.mov out.mp4`
 
 ## Ideas for next versions
 

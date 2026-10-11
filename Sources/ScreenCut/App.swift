@@ -10,7 +10,7 @@ struct ScreenCutApp: App {
     }
 
     var body: some Scene {
-        Window("ScreenCut", id: "main") {
+        Window("Mahmoud", id: "main") {
             ContentView()
                 .environmentObject(model)
                 .environmentObject(recorder)

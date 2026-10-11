@@ -80,7 +80,7 @@ final class Recorder: NSObject, ObservableObject {
             }
             if hideAppWhileRecording { NSApp.hide(nil) }
         } catch {
-            lastError = "Could not start recording: \(error.localizedDescription)\n\nIf this is the first run, allow ScreenCut in System Settings > Privacy & Security > Screen & System Audio Recording, then try again."
+            lastError = "Could not start recording: \(error.localizedDescription)\n\nIf this is the first run, allow Mahmoud in System Settings > Privacy & Security > Screen & System Audio Recording, then try again."
             stream = nil
         }
     }
@@ -111,7 +111,7 @@ final class Recorder: NSObject, ObservableObject {
 
     private static func newRecordingURL() throws -> URL {
         let dir = FileManager.default.urls(for: .moviesDirectory, in: .userDomainMask)[0]
-            .appendingPathComponent("ScreenCut", isDirectory: true)
+            .appendingPathComponent("Mahmoud", isDirectory: true)
         try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
         let f = DateFormatter()
         f.dateFormat = "yyyy-MM-dd 'at' HH.mm.ss"

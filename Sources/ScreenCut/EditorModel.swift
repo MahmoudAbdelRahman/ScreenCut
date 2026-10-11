@@ -382,7 +382,7 @@ final class EditorModel: ObservableObject {
         guard !project.segments.isEmpty else { return }
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.mpeg4Movie]
-        panel.nameFieldStringValue = (projectURL?.deletingPathExtension().lastPathComponent ?? "ScreenCut Export") + ".mp4"
+        panel.nameFieldStringValue = (projectURL?.deletingPathExtension().lastPathComponent ?? "Mahmoud Export") + ".mp4"
         guard panel.runModal() == .OK, let url = panel.url else { return }
         Task { await export(to: url, settings: settings) }
     }
@@ -419,7 +419,7 @@ final class EditorModel: ObservableObject {
         guard !project.segments.isEmpty else { return }
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.gif]
-        panel.nameFieldStringValue = (projectURL?.deletingPathExtension().lastPathComponent ?? "ScreenCut Export") + ".gif"
+        panel.nameFieldStringValue = (projectURL?.deletingPathExtension().lastPathComponent ?? "Mahmoud Export") + ".gif"
         guard panel.runModal() == .OK, let url = panel.url else { return }
         Task { await exportGIF(to: url, settings: settings) }
     }

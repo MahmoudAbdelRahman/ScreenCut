@@ -45,7 +45,7 @@ struct ContentView: View {
                     Toggle("System audio", isOn: $recorder.captureSystemAudio)
                     Toggle("Microphone", isOn: $recorder.captureMicrophone)
                     Toggle("Show cursor", isOn: $recorder.showCursor)
-                    Toggle("Hide ScreenCut while recording", isOn: $recorder.hideAppWhileRecording)
+                    Toggle("Hide Mahmoud while recording", isOn: $recorder.hideAppWhileRecording)
                     Divider()
                     Toggle("Record at 60 fps (larger files)", isOn: $recorder.record60fps)
                     Toggle("Compact recordings (HEVC)", isOn: $recorder.recordHEVC)
@@ -68,7 +68,7 @@ struct ContentView: View {
                 .disabled(model.project.segments.isEmpty)
             }
         }
-        .navigationTitle(model.projectURL?.deletingPathExtension().lastPathComponent ?? "ScreenCut")
+        .navigationTitle(model.projectURL?.deletingPathExtension().lastPathComponent ?? "Mahmoud")
         .sheet(item: $model.frameEditor) { req in
             FrameEditorSheet(request: req).environmentObject(model)
         }
@@ -91,7 +91,7 @@ struct ContentView: View {
                 }
             }
         }
-        .alert("ScreenCut", isPresented: Binding(get: { model.errorMessage != nil },
+        .alert("Mahmoud", isPresented: Binding(get: { model.errorMessage != nil },
                                                  set: { if !$0 { model.errorMessage = nil } })) {
             Button("OK") { model.errorMessage = nil }
         } message: {
